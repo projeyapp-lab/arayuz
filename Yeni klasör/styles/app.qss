@@ -1,0 +1,275 @@
+/* Genel tema */
+QMainWindow {
+    background-color: #f5f5f5;
+}
+
+QWidget {
+    font-family: "Segoe UI", "Roboto", "Arial";
+    font-size: 10pt;
+    color: #111111;
+}
+
+QGroupBox {
+    font-weight: 600;
+}
+
+/* ============================================
+   HEADER & CONNECTION
+   ============================================ */
+
+/* Header çerçevesi */
+QFrame#HeaderFrame {
+    background-color: #9aa9c2;
+    border: 1px solid #b9c2cc;
+    border-radius: 6px;
+}
+
+QFrame#HeaderFrame QLabel {
+    color: #111111;
+}
+
+/* Connection panel kartı */
+QFrame#ConnFrame {
+    background-color: #a9b7ce;
+    border: 1px solid #b0bac5;
+    border-radius: 6px;
+}
+
+QFrame#ConnFrame QLabel {
+    color: #222222;
+    font-weight: 600;
+    font-size: 9pt;
+}
+
+QFrame#ConnFrame QPushButton {
+    background-color: #00b4aa;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 9pt;
+    font-weight: 600;
+}
+
+QFrame#ConnFrame QPushButton:hover {
+    background-color: #009a92;
+}
+
+QFrame#ConnFrame QPushButton:disabled {
+    background-color: #b8c0ca;
+    color: #f5f5f5;
+}
+
+QFrame#ConnFrame QComboBox {
+    padding: 3px 6px;
+    border: 1px solid #b0bac5;
+    border-radius: 4px;
+    background-color: #ffffff;
+    min-width: 90px;
+}
+
+QFrame#ConnFrame QComboBox QAbstractItemView {
+    background-color: #ffffff;
+    color: #000000;
+    selection-background-color: #00b4aa;
+}
+
+/* Status label (dynamic by property) */
+QLabel#StatusLabel[status="idle"] {
+    background-color: #cccccc;
+    color: #333333;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+QLabel#StatusLabel[status="connected"] {
+    background-color: #0078d4;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+QLabel#StatusLabel[status="active"] {
+    background-color: #28a745;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+QLabel#StatusLabel[status="error"] {
+    background-color: #d32f2f;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+/* ============================================
+   SENSOR STATUS PANEL (YENİ)
+   ============================================ */
+
+QFrame#sensorStatusCard {
+    background-color: #ffffff;
+    border: 1px solid #d0d5dd;
+    border-radius: 10px;
+}
+
+/* Sensor Status Title */
+QFrame#sensorStatusCard > QVBoxLayout > QLabel {
+    color: #111111;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* Check Sensor Status Button */
+QFrame#sensorStatusCard QPushButton {
+    background-color: #00b4aa;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 10pt;
+    font-weight: 600;
+    min-height: 36px;
+}
+
+QFrame#sensorStatusCard QPushButton:hover {
+    background-color: #009a92;
+}
+
+QFrame#sensorStatusCard QPushButton:pressed {
+    background-color: #007d77;
+}
+
+QFrame#sensorStatusCard QPushButton:disabled {
+    background-color: #cccccc;
+    color: #999999;
+}
+
+/* Sensor Status Value Labels */
+QLabel#sensorStatusLabel {
+    font-weight: bold;
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    color: #666666;
+}
+
+/* Info Label (dinamik olarak renkledirilir) */
+QFrame#sensorStatusCard QLabel[objectName="info_label"] {
+    font-size: 8pt;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+/* ============================================
+   LIVE SENSOR DATA PANEL
+   ============================================ */
+
+QFrame#liveSensorCard {
+    background-color: #ffffff;
+    border: 1px solid #d0d5dd;
+    border-radius: 10px;
+}
+
+QLabel#liveSensorTitle {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+QLabel#liveSensorValue {
+    background: transparent;
+    border: none;
+    padding: 0px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* ============================================
+   CONTROL PANEL
+   ============================================ */
+
+QFrame#TestFrame {
+    background-color: #b9c2cc;
+    border: 1px solid #b0bac5;
+    border-radius: 6px;
+}
+
+QFrame#TestFrame QLabel {
+    color: #222222;
+    font-weight: 600;
+    font-size: 9pt;
+}
+
+QFrame#TestFrame QLineEdit {
+    border: 1px solid #b0bac5;
+    padding: 1px 3px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-size: 8pt;
+}
+
+QFrame#TestFrame QPushButton {
+    background-color: #00b4aa;
+    color: white;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 9pt;
+    font-weight: 600;
+    min-height: 20px;
+}
+
+QFrame#TestFrame QPushButton:hover {
+    background-color: #009a92;
+}
+
+QFrame#TestFrame QPushButton:disabled {
+    background-color: #b8c0ca;
+    color: #f5f5f5;
+}
+
+/* ============================================
+   GRAPH PANEL
+   ============================================ */
+
+QLabel#graphTitleLabel {
+    color: black;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+/* ============================================
+   SUMMARY DIALOG
+   ============================================ */
+
+QDialog#SummaryDialog {
+    background: #ffffff;
+}
+
+QDialog#SummaryDialog QLabel {
+    color: #111111;
+    font-size: 14px;
+    font-family: "Segoe UI", Arial;
+}
+
+QDialog#SummaryDialog QLabel#SummaryTitle {
+    color: #00AFAA;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+QDialog#SummaryDialog QPushButton {
+    background-color: #00AFAA;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QDialog#SummaryDialog QPushButton:hover {
+    background-color: #009999;
+}
